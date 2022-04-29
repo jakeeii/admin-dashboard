@@ -9,10 +9,20 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+button {
+  background-color: var(--main-blue);
+  color: white;
+  height: 35px;
+  width: 100px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
 .container {
   display: grid;
   grid-template-columns: .75fr 4fr;
-  grid-template-rows: 1.5fr 4fr;
+  grid-template-rows: 1fr 4fr;
 }
 
 .sidebar {
@@ -61,9 +71,41 @@ li {
 .header {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  display: grid;
+  grid-template-rows: 1fr 1.5fr;
+  margin: 0 0 0 10px;
+}
+
+.top-bar {
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-columns: 50px 1fr 70px 70px 100px;
+  align-items: center;
+  margin: 15px 0 0 0;
+}
+
+.search-icon {
+  margin: 0 0 0 20px
+}
+
+.search {
+  margin-right: 100px;
+  border-radius: 20px;
+  height: 25px;
+  border: none;
+  background-color: #e0f2fe;
+}
+
+.bottom-bar {
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: 75px 1fr 125px 125px 125px;
+  margin: 0 0 0 35px;
+  align-items: center;
 }
 
 .content {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  background-color: #d1dce2;
 }
