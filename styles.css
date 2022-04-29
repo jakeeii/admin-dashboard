@@ -1,5 +1,6 @@
 :root {
-  --main-blue: #0284c7
+  --main-blue: #0284c7;
+  --main-grey: #d1dce2;
 }
 
 html,
@@ -85,7 +86,7 @@ li {
 }
 
 .search-icon {
-  margin: 0 0 0 20px
+  margin: 0 0 0 20px;
 }
 
 .search {
@@ -93,7 +94,7 @@ li {
   border-radius: 20px;
   height: 25px;
   border: none;
-  background-color: #e0f2fe;
+  background-color: var(--main-grey);
 }
 
 .bottom-bar {
@@ -107,5 +108,76 @@ li {
 .content {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  background-color: #d1dce2;
+  display: grid;
+  grid-template-columns: 2fr .8fr;
+  grid-template-rows: 50px 1fr;
+  background-color: var(--main-grey);
+}
+
+.title-row {
+  align-self: end;
+  font-weight: 500;
+}
+.title-row.project {
+  margin-left: 15px;
+}
+
+.title-row,
+.card-container {
+  grid-row: 1 / 2;
+}
+
+.title-row.announcement {
+  grid-column: 2 / 3;
+  margin-left: 10px;
+}
+
+.card-container,
+.announcement-container,
+.trending-container,
+.trending {
+  grid-row: 2 / 3;
+}
+
+.card-container {
+  display: grid;
+  margin: 5px 10px 25px 15px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background-color: white;
+  width: auto;
+  padding: 20px 20px;
+  border-radius: 6px;
+}
+
+.content-right {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-rows: 1.5fr 50px 1fr;
+  margin: 5px 15px 0 10px;
+  max-height: 497px;
+}
+
+.announcement-container {
+  grid-row: 1 / 2;
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.trending {
+  grid-row: 2 / 3;
+  align-self: end;
+  font-weight: 500;
+}
+
+.trending-container {
+  grid-row: 3 / 4;
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+  margin-top: 5px;
 }
