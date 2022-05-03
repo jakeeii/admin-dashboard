@@ -105,7 +105,7 @@ li {
 .top-bar {
   grid-row: 1 / 2;
   display: grid;
-  grid-template-columns: 50px 1fr 70px 70px 100px;
+  grid-template-columns: 50px 1fr 50px 60px 130px;
   align-items: center;
   margin: 15px 0 0 0;
 }
@@ -120,6 +120,39 @@ li {
   height: 25px;
   border: none;
   background-color: var(--main-grey);
+}
+
+.icon2 {
+  width: 40px;
+  height: auto;
+}
+
+.icon3 {
+  padding-right: 10px;
+  font-weight: 500;
+}
+
+.icon1,
+.icon2:hover {
+  cursor: pointer;
+}
+
+.avatar {
+  width: 70px;
+}
+
+.avatar:hover {
+  cursor: pointer;
+}
+
+.hello {
+  font-size: 12px;
+}
+
+.greeting {
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 20px;
 }
 
 .bottom-bar {
