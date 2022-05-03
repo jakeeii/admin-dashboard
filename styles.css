@@ -2,6 +2,7 @@
   --main-blue: #0284c7;
   --main-grey: #d1dce2;
   --blue-hover: #0ea5e9;
+  --grey-text: rgb(103, 103, 103);
 }
 
 html,
@@ -29,7 +30,6 @@ button:hover {
 .container {
   display: grid;
   grid-template-columns: .75fr 4fr;
-  grid-template-rows: .8fr 4fr;
 }
 
 .sidebar {
@@ -166,7 +166,7 @@ li {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   display: grid;
-  grid-template-columns: 2fr .8fr;
+  grid-template-columns: 2fr .7fr;
   grid-template-rows: 50px 1fr;
   background-color: var(--main-grey);
 }
@@ -216,7 +216,7 @@ li {
 }
 
 .card > p {
-  color: rgb(103, 103, 103);
+  color: var(--grey-text);
 }
 .icons {
   justify-self: end;
@@ -245,6 +245,37 @@ li {
   background-color: white;
   padding: 20px;
   border-radius: 6px;
+  display: grid;
+  grid-template-rows: repeat(3, auto-fit);
+}
+
+.announcement > h4,
+.announcement > p {
+  margin: 0;
+  padding: 0;
+}
+
+.announcement > h4 {
+  font-size: 14px;
+}
+
+.announcement > p {
+  font-size: 12px;
+  color: var(--grey-text);
+}
+
+.announcement.one {
+  padding-bottom: 15px;
+}
+
+.announcement.two {
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+  padding: 15px 0;
+}
+
+.announcement.three {
+  padding-top: 15px;
 }
 
 .trending {
@@ -259,4 +290,25 @@ li {
   padding: 20px;
   border-radius: 6px;
   margin-top: 5px;
+  display: grid;
+  grid-template-rows: repeat(4, auto-fit);
+  gap: 22px;
+}
+
+.profile-pic {
+  width: 40px;
+}
+
+.person {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.person-text {
+  font-size: 14px;
+  align-self: center;
+}
+
+.title {
+  color: var(--grey-text);
 }
