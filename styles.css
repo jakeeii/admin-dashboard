@@ -29,7 +29,7 @@ button:hover {
 .container {
   display: grid;
   grid-template-columns: .75fr 4fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: .8fr 4fr;
 }
 
 .sidebar {
@@ -40,7 +40,6 @@ button:hover {
   grid-template-columns: 1fr 3fr; */
   background-color: var(--main-blue);
   color: white;
-  height: 100vh;
   position: relative;
 }
 
@@ -206,12 +205,31 @@ li {
 
 .card {
   width: auto;
-  padding: 20px 20px;
+  padding: 0 20px 10px 20px;
   border-radius: 6px;
   background: linear-gradient(90deg, gold 2%, white 2%);
   -webkit-box-shadow: 0 6px 6px -6px black;
   -moz-box-shadow: 0 6px 6px -6px black;
   box-shadow: 0 6px 6px -6px black;
+  display: grid;
+  grid-template-rows: 30px 1fr 30px;
+}
+
+.card > p {
+  color: rgb(103, 103, 103);
+}
+.icons {
+  justify-self: end;
+}
+
+.card-icon1,
+.card-icon2,
+.card-icon3:hover {
+  cursor: pointer;
+}
+
+.card-icon2 {
+  margin: 0 15px;
 }
 
 .content-right {
